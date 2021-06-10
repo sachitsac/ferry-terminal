@@ -1,0 +1,23 @@
+<div>
+  <h2 class="page-title">Ferries:</h2>
+  <div class="ferry-container">
+    <div class="ferry" *ngFor="let ferry of ferries$ | async">
+      <app-ferry [ferry]="ferry"></app-ferry>
+    </div>
+  </div>
+
+  <div class="vehicle-container">
+    <app-vehicle
+      *ngIf="currentVehicle"
+      [vehicle]="currentVehicle"
+      (onVehicleAssign)="assign($event)"
+    ></app-vehicle>
+  </div>
+
+  <div class="alert alert-danger" *ngIf="capacityReached">
+    Ferry has reached capacity and will not accept any more vehicles.
+  </div>
+  <button class="button btn-large btn-primary" (click)="getVehicle()">
+    Get Vehicle
+  </button>
+</div>

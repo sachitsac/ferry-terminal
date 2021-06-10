@@ -1,0 +1,10 @@
+<div *ngIf="vehicle" class="card vehicle-details">
+  <h4>Vehicle Details:</h4>
+  <br />
+
+  <p>Category: {{ vehicle.category }}</p>
+  <p>Type: {{ vehicle.type }}</p>
+  <br />
+
+  <button class="button btn-primary" (click)="assign()">Assign</button>
+</div>

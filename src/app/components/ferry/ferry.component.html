@@ -1,0 +1,33 @@
+<div class="ferry-details" [ngClass]="{ 'ferry-full': isFull }">
+  <fieldset>
+    <legend>{{ ferry.size }}</legend>
+
+    <div class="load-item-container">
+      <div class="load-items card" *ngFor="let item of ferry.items">
+        <div class="flex">
+          <p class="flex-grow-2">
+            {{ item.type }}
+          </p>
+          <p class="flex-shrink-1">
+            {{ item.cost / 100 | currency }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ferry-footer">
+      <div class="revenue-summary align-center">
+        Total Ferry Revenue:
+        <span class="color-success">{{ ferryRevenue | currency }}</span>
+        <br />
+        Total Worker Revenue:
+        <span class="color-success">{{ workerCommission | currency }}</span>
+      </div>
+      <div class="actions align-center mr-sm">
+        <button class="button" *ngIf="isFull" (click)="unloadFerry()">
+          Unload Ferry
+        </button>
+      </div>
+    </div>
+  </fieldset>
+</div>

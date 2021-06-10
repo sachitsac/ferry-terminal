@@ -1,0 +1,13 @@
+.ferry-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.ferry {
+  flex: 1;
+}
+
+.page-title {
+  margin-bottom: 20px;
+}

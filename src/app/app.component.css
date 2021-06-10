@@ -1,0 +1,12 @@
+div {
+  text-align: center;
+}
+
+.submission,
+.instructions,
+.solution {
+  text-align: left;
+  margin-left: 20%;
+  margin-bottom: 10%;
+  margin-right: 20%;
+}

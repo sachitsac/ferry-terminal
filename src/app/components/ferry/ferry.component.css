@@ -1,0 +1,24 @@
+.ferry-details {
+  position: relative;
+}
+
+.ferry-details fieldset {
+  min-height: 250px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%);
+}
+
+.load-item-container {
+  min-height: 190px;
+}
+
+.ferry-full fieldset {
+  border: 1px solid #d65c5c;
+  background-color: #fff6f7;
+}
+
+.ferry-footer {
+  display: flex;
+  flex-direction: row-reverse;
+}
